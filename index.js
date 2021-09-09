@@ -1,1 +1,1 @@
-console.log("works")
+console.log("API_KEY = ", API_KEY);
