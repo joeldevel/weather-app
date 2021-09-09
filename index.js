@@ -11,7 +11,19 @@ function getWeatherData(location) {
   let url  = BASE_URL + "/" + query + "q=" + cityName + "&appid=" + API_KEY;
   fetch(url, {mode: 'cors'})
   .then((response) => response.json())
-  .then(data => console.log(data));
+  .then(data => {
+    // console.log(data)
+    currentWeather = processJSONData(data);
+    console.log(currentWeather);
+  });
+}
+
+function processJSONData(data) {
+  weather = {
+    "temp": data.main.temp
+  };
+
+  return weather;
 }
 
 getWeatherData("Buenos Aires");
