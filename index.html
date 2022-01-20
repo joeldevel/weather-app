@@ -10,7 +10,21 @@
 
     <h1>weather app</h1>
 
-    <div id="root"></div>
+    <div id="root">
+        <form action="#" class="input-form" id="form">
+            <div class="input-container">
+                <label class="input-label">Search for cities</label>
+                <input type="text" class="input-field" placeholder="Buenos Aires" id="user-input">
+                <input type="submit" value="search">
+            </div>
+        </form>
+
+        <div class="card">
+            <h2 class="" id="city-name"></h2>
+            <h3 id="city-temperature"></h3>
+            <img src="#" alt="" class="weather-icon" id="weather-icon">
+        </div>
+    </div>
 
 
     <script type="text/javascript" src="api.js.hidden">
